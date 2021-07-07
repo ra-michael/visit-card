@@ -1,0 +1,396 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../font/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Medium.ttf") format("truetype");
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #003c60,
+    #006169,
+    #00834f,
+    #719127
+  );
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ======== Visit Card ======== */
+
+.card-wrapper {
+  background-color: transparent;
+  height: 330px;
+  width: 600px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+}
+
+.btn_rotate {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.btn_rotate:hover {
+  box-shadow: -5px -5px 20px 0px rgba(43, 43, 43, 0.6);
+}
+
+.card {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transition: 1s ease;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* ======== Card Back ======== */
+
+.back {
+  background-image: linear-gradient(
+    to right top,
+    #141413,
+    #151614,
+    #171715,
+    #181916,
+    #191a17
+  );
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  backface-visibility: hidden;
+  user-select: none;
+  font-family: Roboto;
+}
+
+.logo {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  top: 80px;
+}
+
+.schoolname {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top: 175px;
+  font-weight: 400;
+}
+
+.slogan {
+  color: #1afa65;
+  position: absolute;
+  top: 210px;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.lien {
+  color: #1afa65;
+  position: absolute;
+  bottom: 10px;
+  font-style: italic;
+  font-size: 15px;
+}
+
+/* ======== Card Front ======== */
+
+.front {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.minilogo {
+  height: 65px;
+  width: 65px;
+  position: absolute;
+  bottom: 60px;
+  right: 100px;
+  z-index: 2;
+}
+
+.info {
+  height: 255px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #252628;
+}
+
+.contact {
+  width: 100%;
+  position: absolute;
+  left: 25px;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.contact svg {
+  margin-right: 5px;
+}
+
+.nom {
+  font-family: "Roboto";
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  font-weight: 600;
+}
+
+.filiere {
+  font-family: Poppins;
+  font-size: 14px;
+  position: absolute;
+  top: 55px;
+  font-weight: 580;
+  text-align: center;
+}
+
+.ligne {
+  background-color: #05812f;
+  height: 2px;
+  width: 200px;
+  position: absolute;
+  top: 115px;
+}
+
+.number,
+.mail,
+.address,
+.facebook {
+  position: absolute;
+}
+
+.number {
+  top: 140px;
+}
+
+.mail {
+  top: 170px;
+}
+
+.address {
+  top: 200px;
+}
+
+.facebook {
+  top: 230px;
+}
+
+.card svg {
+  color: #03802d;
+}
+
+a {
+  text-decoration: none;
+  color: #252628;
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.wave-bottom img {
+  position: relative;
+  display: block;
+  width: calc(280% + 1.5px);
+  height: 272px;
+  transform: rotateY(180deg);
+}
+
+.schoolnameback {
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  font-family: Poppins;
+  font-weight: 400;
+  bottom: 30px;
+  right: 5px;
+  text-align: center;
+  z-index: 2;
+}
+
+.schooladdress {
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 400;
+  bottom: 5px;
+  right: 40px;
+  width: 200px;
+  text-align: center;
+  z-index: 2;
+}
+
+.schooladdress svg {
+  position: relative;
+  bottom: 2px;
+}
+
+/* ======== Breadcrumb ======== */
+
+#breadcrumb {
+  list-style: none;
+  display: inline-block;
+}
+
+#breadcrumb li {
+  float: left;
+}
+#breadcrumb li a {
+  color: #fff;
+  font-family: Roboto;
+  display: block;
+  background: #333333;
+  text-decoration: none;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 23px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+#breadcrumb li svg {
+  font-size: 20px;
+  margin-right: 2px;
+}
+
+#breadcrumb li:first-child a {
+  padding-left: 15px;
+  padding-top: 2px;
+}
+
+#breadcrumb li:first-child a::before {
+  border: none;
+}
+
+#breadcrumb li a.active {
+  padding-right: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 2px;
+  background: #0865a3;
+}
+
+#breadcrumb li a.active::after {
+  border: none;
+}
+
+#breadcrumb li a::before,
+#breadcrumb li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #0865a3;
+  border-width: 20px 10px;
+  width: 0;
+  height: 0;
+}
+
+#breadcrumb li a::before {
+  left: -20px;
+  border-left-color: transparent;
+}
+
+#breadcrumb li a::after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #333333;
+}
+
+#breadcrumb li a:hover {
+  background-color: #1abc9c;
+}
+
+#breadcrumb li a:hover::before {
+  border-color: #1abc9c;
+  border-left-color: transparent;
+}
+
+#breadcrumb li a:hover::after {
+  border-left-color: #1abc9c;
+}
+
+@media only screen and (max-width: 720px) {
+  .card-wrapper {
+    width: 500px;
+  }
+
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
+
+  .schoolname {
+    font-size: 18px;
+  }
+
+  .filiere {
+    font-size: 12px;
+  }
+
+  .contact {
+    font-size: 14px;
+  }
+
+  .nom {
+    font-size: 25px;
+  }
+
+  .schoolnameback {
+    font-size: 11px;
+  }
+
+  .minilogo {
+    height: 55px;
+    width: 55px;
+  }
+}
